@@ -1,66 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>Berberhane</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen bg-stone-950 text-white">
+      <header className="border-b border-stone-800 px-6 py-5">
+        <div className="mx-auto flex max-w-5xl items-center justify-between">
+          <h1 className="text-2xl font-bold text-amber-400">✂ BERBERI</h1>
+          <Link
+            href="/termin"
+            className="rounded-full bg-amber-400 px-5 py-2 font-semibold text-black"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Kërko termin
+          </Link>
         </div>
-      </main>
-    </div>
+      </header>
+
+      <section className="mx-auto flex min-h-[calc(100vh-140px)] max-w-5xl flex-col justify-center px-6 py-16">
+        <p className="mb-4 font-semibold uppercase tracking-[0.3em] text-amber-400">
+          Stili yt. Kujdesi ynë.
+        </p>
+        <h2 className="max-w-2xl text-5xl font-extrabold leading-tight md:text-7xl">
+          Dukja jote fillon këtu.
+        </h2>
+        <p className="mt-6 max-w-xl text-lg text-stone-300">
+          Zgjidhe shërbimin tënd të preferuar dhe kërko termin online, shpejt
+          dhe lehtë.
+        </p>
+        <div className="mt-8 flex gap-4">
+          <Link
+            href="/sherbimet"
+            className="rounded-lg bg-amber-400 px-7 py-3 font-bold text-black hover:bg-amber-300"
+          >
+            Shiko shërbimet
+          </Link>
+        </div>
+      </section>
+
+      <footer className="border-t border-stone-800 px-6 py-6 text-center text-sm text-stone-400">
+        © 2026 Berberi · Për stilin tënd
+      </footer>
+    </main>
   );
 }
